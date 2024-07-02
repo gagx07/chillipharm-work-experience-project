@@ -1,8 +1,19 @@
-.main {
+body {
     font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.click-button {
     padding: 10px;
     border: 1px solid black;
     background: blue;
     border-radius: 4px;
+    color: white;
+    cursor: pointer;
 }
