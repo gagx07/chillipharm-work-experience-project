@@ -1,0 +1,8 @@
+.main {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 1px solid black;
+    background: blue;
+    border-radius: 4px;
+}
