@@ -10,6 +10,13 @@
         <img class="bannerimg" src="https://cdn.pixabay.com/photo/2015/12/06/09/15/maple-1079235_1280.jpg" alt="banner">
     </div>
     <div>
+        <ul>
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#">link3</a></li>
+        </ul>
+    </div>
+    <div>
         <h1 class="title">Title</h1>
         <p>text</p>
     </div>
@@ -23,10 +30,25 @@
         <h2 class="title">Title</h2>
         <p>text</p>
     </div>
-    <a href="#top">&uarr;</a>
+    <a href="#top" id="upbutton">&uarr;</a>
     <div class="footerDiv">
         <h3 class="footerText">Suport</h3>
         <p class="footerText">Contact Us</p>
     </div>
+    <script>
+        let upButton = document.getElementById("upbutton");
+        function checkScrollPosition(){
+            const scrollThreshold = (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (scrollTop > scrollThreshold){
+                upButton.style.display = "flex";
+            } else {
+                upButton.style.display = "none";
+            }
+        }
+        checkScrollPosition();
+        window.onscroll = checkScrollPosition;
+    </script>
 </body>
 </html>
