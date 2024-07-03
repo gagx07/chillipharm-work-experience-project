@@ -11,24 +11,25 @@
     </div>
     <div>
         <ul>
-            <li><a href="#">link1</a></li>
-            <li><a href="#">link2</a></li>
-            <li><a href="#">link3</a></li>
+            <li id="button1"><a href="#">Druid</a></li>
+            <li id="button2"><a href="#">Artificer</a></li>
+            <li id="button3"><a href="#">Wizard</a></li>
+            <li id="button4" style="float:right"><a href="#" id="dont"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1280px-HD_transparent_picture.png" id="inv"></a></li>
         </ul>
     </div>
     <div>
-        <h1 class="title">Title</h1>
-        <p>text</p>
+        <h1 class="title" id="FTitle">Intro</h1>
+        <p id="FText">Druids are a type of spell caster that get their magic from nature. thier spells mainly revolve around manipulating the eviroment in cobat this could include: healing, chaning terrain type, limiting or granting movment. they also have the extra abilty to shape shift into spesific animals</p>
     </div>
     <p class="gap"></p>
     <div>
-        <img src="url" alt="alternatetext">
-        <p class="imgtext">text</p>
+        <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/21854/large_Poly_Orange_7579up_1471502253.jpg" alt="alternatetext">
+        <p id="imgtext">In the late game druids gain acses to unlimited ussage of thier shape shifting as well as acses to alot more spells that alow them to both damage oponats and help teammates.</p>
     </div>
     <p class="gap"></p>
     <div>
-        <h2 class="title">Title</h2>
-        <p>text</p>
+        <h2 class="title" id = "STitle">Title-1</h2>
+        <p id="TText">text-1</p>
     </div>
     <a href="#top" id="upbutton">&uarr;</a>
     <div class="footerDiv">
@@ -36,12 +37,13 @@
         <p class="footerText">Contact Us</p>
     </div>
     <script>
+        // upbutton
         let upButton = document.getElementById("upbutton");
         function checkScrollPosition(){
             const scrollThreshold = (document.documentElement.scrollHeight - document.documentElement.clientHeight);
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-            if (scrollTop > scrollThreshold){
+            if (scrollTop-700 > scrollThreshold){
                 upButton.style.display = "flex";
             } else {
                 upButton.style.display = "none";
@@ -49,6 +51,52 @@
         }
         checkScrollPosition();
         window.onscroll = checkScrollPosition;
+        //nav bar
+        var r = document.querySelector(':root');
+        var counter = 0;
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const button1 = document.getElementById('button1');
+            const button2 = document.getElementById('button2');
+            const button3 = document.getElementById('button3');
+            const button4 = document.getElementById('button4')
+
+            button1.addEventListener('click', () => {
+                r.style.setProperty('--bg-color', '#8A9A5B');
+                document.getElementById("FTitle").innerHTML = "Intro";
+                document.getElementById("FText").innerHTML = "druids are a type of spell caster that get their magic from nature. thier spells mainly revolve around manipulating the eviroment in cobat this could include: healing, chaning terrain type, limiting or granting movment. they also have the extra abilty to shape shift into spesific animals";
+                document.getElementById("imgtext").innerHTML = "In the late game druids gain acses to unlimited ussage of thier shape shifting as well as acses to alot more spells that alow them to both damage oponats and help teammates.";
+                document.getElementById("STitle").innerHTML = "Title-1";
+                document.getElementById("TText").innerHTML = "Text-1";
+                });
+            button2.addEventListener('click', () => {
+                console.log("wtf")
+                r.style.setProperty('--bg-color', '#FFEFA8');
+                document.getElementById("FTitle").innerHTML = "Title-2";
+                document.getElementById("FText").innerHTML = "Text-2";
+                document.getElementById("STitle").innerHTML = "Title-2";
+                document.getElementById("TText").innerHTML = "Text-2";
+                document.getElementById("imgtext").innerHTML = "Text-2";
+            });
+            button3.addEventListener('click', () => {
+                r.style.setProperty('--bg-color', '#3CDCFF');
+                document.getElementById("FTitle").innerHTML = "Title-3";
+                document.getElementById("FText").innerHTML = "Text-3";
+                document.getElementById("STitle").innerHTML = "Title-3";
+                document.getElementById("TText").innerHTML = "Text-3";
+                document.getElementById("imgtext").innerHTML = "Text-3";
+            });
+            button4.addEventListener('click', () => {
+        if (counter == 0){
+            r.style.setProperty("--rain", "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)");
+            document.getElementById("inv").src = "https://re-mm-assets.s3.amazonaws.com/product_photo/21854/large_Poly_Orange_7579up_1471502253.jpg";
+            counter = 1;
+        } else{
+            r.style.setProperty("--rain", "");
+            document.getElementById("inv").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1280px-HD_transparent_picture.png";
+            counter = 0;   
+        }
+    })
+})
     </script>
 </body>
 </html>

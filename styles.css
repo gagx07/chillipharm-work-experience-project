@@ -1,5 +1,9 @@
+:root{
+    --bg-color: #8A9A5B;
+    --rain: "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)";
+}
 *{
-    background-color: #8A9A5B;
+    background-color: var(--bg-color);
   }
   body{
     margin: 0;
@@ -21,6 +25,7 @@
   li{
     display: inline;
     float:left;
+    background-color: #333;
   }
   li a{
     display: block;
@@ -29,6 +34,10 @@
     padding: 14px 16px;
     text-decoration: none;
     background-color: #333;
+  }
+  li a:hover{
+    background-image: var(--rain);
+    animation:slidebg 5s linear infinite;
   }
   .title {
    color: rgb(0,0,0);
@@ -72,6 +81,17 @@
     justify-content: center;
     align-items: center;
   }
+  #inv{
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border: 10px;
+  }
   img{
     float: left;
+  }
+  @keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
   }
