@@ -11,24 +11,24 @@
     </div>
     <div>
         <ul>
-            <li><a id="button1" href="#">link1</a></li>
-            <li><a id="button2" href="#">link2</a></li>
-            <li><a id="button3" href="#">link3</a></li>
+            <li id="button1"><a href="#">link1</a></li>
+            <li id="button2"><a href="#">link2</a></li>
+            <li id="button3"><a href="#">link3</a></li>
         </ul>
     </div>
     <div>
-        <h1 class="title">Title</h1>
-        <p>text</p>
+        <h1 class="title" id="FTitle">Title-1</h1>
+        <p id="FText">text-1</p>
     </div>
     <p class="gap"></p>
     <div>
-        <img src="url" alt="alternatetext">
-        <p class="imgtext">text</p>
+        <img src="https://re-mm-assets.s3.amazonaws.com/product_photo/21854/large_Poly_Orange_7579up_1471502253.jpg" alt="alternatetext">
+        <p id="imgtext">text-1</p>
     </div>
     <p class="gap"></p>
     <div>
-        <h2 class="title">Title</h2>
-        <p>text</p>
+        <h2 class="title" id = "STitle">Title-1</h2>
+        <p id="TTitle">text-1</p>
     </div>
     <a href="#top" id="upbutton">&uarr;</a>
     <div class="footerDiv">
@@ -49,22 +49,36 @@
         }
         checkScrollPosition();
         window.onscroll = checkScrollPosition;
-
+        var r = document.querySelector(':root');
         document.addEventListener("DOMContentLoaded", (event) => {
-        const button1 = document.getElementById("button1");
-        const button2 = document.getElementById("button2");
-        const button3 = document.getElementById("button3");
-        const box = document.querySelector("button1.box");
+            const button1 = document.getElementById('button1');
+            const button2 = document.getElementById('button2');
+            const button3 = document.getElementById('button3');
 
-        button1.addEventListener('click', () => {
-            box.style.setProperty('--main-color', '#FFEFA8');
-        });
-        button1.addEventListener('click', () => {
-            box.style.setProperty('--main-color', '#8A9A5B');
-        });
-        button1.addEventListener('click', () => {
-            box.style.setProperty('--main-color', '#007BFF');
-        });
+            button1.addEventListener('click', () => {
+                r.style.setProperty('--bg-color', '#8A9A5B');
+                document.getElementById("FTitle").innerHTML = "Title-1";
+                document.getElementById("FText").innerHTML = "Text-1";
+                document.getElementById("STitle").innerHTML = "Title-1";
+                document.getElementById("TText").innerHTML = "Text-1";
+                document.getElementById("imgtext").innerHTML = "Text-1";
+            });
+            button2.addEventListener('click', () => {
+                r.style.setProperty('--bg-color', '#FFEFA8');
+                document.getElementById("FTitle").innerHTML = "Title-2";
+                document.getElementById("FText").innerHTML = "Text-2";
+                document.getElementById("STitle").innerHTML = "Title-2";
+                document.getElementById("TText").innerHTML = "Text-2";
+                document.getElementById("imgtext").innerHTML = "Text-2";
+            });
+            button3.addEventListener('click', () => {
+                r.style.setProperty('--bg-color', '#3CDCFF');
+                document.getElementById("FTitle").innerHTML = "Title-3";
+                document.getElementById("FText").innerHTML = "Text-3";
+                document.getElementById("STitle").innerHTML = "Title-3";
+                document.getElementById("TText").innerHTML = "Text-3";
+                document.getElementById("imgtext").innerHTML = "Text-3";
+            });
         })
     </script>
 </body>

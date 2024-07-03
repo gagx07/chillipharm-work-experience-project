@@ -1,16 +1,17 @@
+
+var r = document.querySelector(':root');
 document.addEventListener("DOMContentLoaded", (event) => {
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-    const button3 = document.getElementById("button3");
-    const box = document.querySelector("button1.box");
+    const button1 = document.getElementById('button1');
+    const button2 = document.getElementById('button2');
+    const button3 = document.getElementById('button3');
 
     button1.addEventListener('click', () => {
-        box.style.setProperty('--main-color', '#FFEFA8');
+        r.style.setProperty('--bg-color', '#8A9A5B');
     });
-    button1.addEventListener('click', () => {
-        box.style.setProperty('--main-color', '#8A9A5B');
+    button2.addEventListener('click', () => {
+        r.style.setProperty('--bg-color', '#FFEFA8');
     });
-    button1.addEventListener('click', () => {
-        box.style.setProperty('--main-color', '#007BFF');
+    button3.addEventListener('click', () => {
+        r.style.setProperty('--bg-color', 'purple');
     });
 })
