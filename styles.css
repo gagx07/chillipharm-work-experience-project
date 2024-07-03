@@ -1,5 +1,6 @@
 *{
-    background-color: #8A9A5B;
+    --main-color: #8A9A5B;
+    background-color: var(--main-color);
   }
   body{
     margin: 0;

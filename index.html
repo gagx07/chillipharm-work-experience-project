@@ -11,9 +11,9 @@
     </div>
     <div>
         <ul>
-            <li><a href="#">link1</a></li>
-            <li><a href="#">link2</a></li>
-            <li><a href="#">link3</a></li>
+            <li><a id="button1" href="#">link1</a></li>
+            <li><a id="button2" href="#">link2</a></li>
+            <li><a id="button3" href="#">link3</a></li>
         </ul>
     </div>
     <div>
@@ -49,6 +49,23 @@
         }
         checkScrollPosition();
         window.onscroll = checkScrollPosition;
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+        const button1 = document.getElementById("button1");
+        const button2 = document.getElementById("button2");
+        const button3 = document.getElementById("button3");
+        const box = document.querySelector("button1.box");
+
+        button1.addEventListener('click', () => {
+            box.style.setProperty('--main-color', '#FFEFA8');
+        });
+        button1.addEventListener('click', () => {
+            box.style.setProperty('--main-color', '#8A9A5B');
+        });
+        button1.addEventListener('click', () => {
+            box.style.setProperty('--main-color', '#007BFF');
+        });
+        })
     </script>
 </body>
 </html>
