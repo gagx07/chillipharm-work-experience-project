@@ -11,9 +11,10 @@
     </div>
     <div>
         <ul>
-            <li id="button1"><a href="#">link1</a></li>
-            <li id="button2"><a href="#">link2</a></li>
-            <li id="button3"><a href="#">link3</a></li>
+            <li id="button1"><a href="#">druid</a></li>
+            <li id="button2"><a href="#">artificer</a></li>
+            <li id="button3"><a href="#">wizard</a></li>
+            <li id="button4" style="float:right"><a href="#" id="dont"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1280px-HD_transparent_picture.png" id="inv"></a></li>
         </ul>
     </div>
     <div>
@@ -28,7 +29,7 @@
     <p class="gap"></p>
     <div>
         <h2 class="title" id = "STitle">Title-1</h2>
-        <p id="TTitle">text-1</p>
+        <p id="TText">text-1</p>
     </div>
     <a href="#top" id="upbutton">&uarr;</a>
     <div class="footerDiv">
@@ -36,12 +37,13 @@
         <p class="footerText">Contact Us</p>
     </div>
     <script>
+        // upbutton
         let upButton = document.getElementById("upbutton");
         function checkScrollPosition(){
             const scrollThreshold = (document.documentElement.scrollHeight - document.documentElement.clientHeight);
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-            if (scrollTop > scrollThreshold){
+            if (scrollTop-700 > scrollThreshold){
                 upButton.style.display = "flex";
             } else {
                 upButton.style.display = "none";
@@ -49,11 +51,14 @@
         }
         checkScrollPosition();
         window.onscroll = checkScrollPosition;
+        //nav bar
         var r = document.querySelector(':root');
+        var counter = 0;
         document.addEventListener("DOMContentLoaded", (event) => {
             const button1 = document.getElementById('button1');
             const button2 = document.getElementById('button2');
             const button3 = document.getElementById('button3');
+            const button4 = document.getElementById('button4')
 
             button1.addEventListener('click', () => {
                 r.style.setProperty('--bg-color', '#8A9A5B');
@@ -79,7 +84,18 @@
                 document.getElementById("TText").innerHTML = "Text-3";
                 document.getElementById("imgtext").innerHTML = "Text-3";
             });
-        })
+            button4.addEventListener('click', () => {
+        if (counter == 0){
+            r.style.setProperty("--rain", "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)");
+            document.getElementById("inv").src = "https://re-mm-assets.s3.amazonaws.com/product_photo/21854/large_Poly_Orange_7579up_1471502253.jpg";
+            counter = 1;
+        } else{
+            r.style.setProperty("--rain", "");
+            document.getElementById("inv").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1280px-HD_transparent_picture.png";
+            counter = 0;   
+        }
+    })
+})
     </script>
 </body>
 </html>
