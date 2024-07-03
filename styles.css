@@ -1,5 +1,5 @@
 *{
-    background-color: rgb(255, 239, 168);
+    background-color: #8A9A5B;
   }
   body{
     margin: 0;
@@ -10,6 +10,25 @@
   }
   a{
     text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  li{
+    display: inline;
+    float:left;
+  }
+  li a{
+    display: block;
+    color: rgba(42, 101, 42, 0.75);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #333;
   }
   .title {
    color: rgb(0,0,0);
@@ -33,6 +52,7 @@
     cursor: pointer;
   }
   .banner{
+    overflow: hidden;
     background-position: center;
   }
   .bannerimg{
