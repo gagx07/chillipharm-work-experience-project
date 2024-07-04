@@ -1,74 +1,99 @@
 :root{
     --bg-color: #8A9A5B;
+    --txt-color: rgba(42, 101, 42, 0.75);
+    --widththing: 500;
     --rain: "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)";
+    --anotherone: #111;
 }
+
 *{
     background-color: var(--bg-color);
-  }
-  body{
+}
+
+body{
     margin: 0;
     text-align: center;
     color: rgba(20, 20, 20, 0.6);
     font-family: Comic Sans MS;
     font-size: 36;
-  }
-  a{
+}
+
+a{
     text-decoration: none;
-  }
-  ul {
+}
+
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-  }
-  li{
+}
+
+li{
     display: inline;
     float:left;
     background-color: #333;
-  }
-  li a{
+}
+
+li a{
     display: block;
-    color: rgba(42, 101, 42, 0.75);
+    color: var(--txt-color);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     background-color: #333;
-  }
-  li a:hover{
+}
+
+li a:hover{
+    background-color: var(--anotherone);
     background-image: var(--rain);
     animation:slidebg 5s linear infinite;
-  }
-  .title {
+}
+
+img{
+  float: left;
+}
+
+.title {
    color: rgb(0,0,0);
-  }
-  .gap{
+}
+
+.gap{
     padding: 15%;
-  }
-  .imgtext{
+}
+
+.imgtext{
     text-align: right;
-  }
-  .footerDiv{
+}
+
+.footerDiv{
     background-color: #333;
     height: 200px;
     overflow: hidden;
-  }
-  .footerText{
+}
+
+.footerText{
     background-color: #333;
-    color: rgba(42, 101, 42, 0.75);
+    color: var(--txt-color);
     padding-bottom: 10px;
     font-weight: bold;
     cursor: pointer;
-  }
-  .banner{
+    margin: 30;
+}
+
+.banner{
     overflow: hidden;
     background-position: center;
-  }
-  .bannerimg{
+}
+
+.bannerimg{
     width: 100%;
+    height: 300px;
     padding-left: 0;
-  }
-  #upbutton{
+}
+
+#upbutton{
     bottom: 10;
     left: 93%;
     position: fixed;
@@ -80,18 +105,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  #inv{
+}
+
+#inv{
     width: 50px;
     height: 50px;
     background-color: #333;
     border: 10px;
-  }
-  img{
-    float: left;
-  }
-  @keyframes slidebg {
+}
+
+#dont:hover{
+    background-image: none;
+    animation: none;
+    background-color: #333;
+}
+
+#classimg{
+    width: var(--widththing);
+    height: 600px;
+}
+
+#classsym{
+    width: 250;
+    height: 250;
+}
+
+@keyframes slidebg {
     to {
       background-position:20vw;
-    }
   }
+}
